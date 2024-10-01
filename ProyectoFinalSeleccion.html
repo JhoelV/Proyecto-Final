@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAGINA WEB FEDERACIÓN BOLIVIANA DE FÚTBOL</title>
+    <style>
+       body{
+        background-color: rgb(220, 234, 220);
+        padding: 0px;
+       }
+       header{
+        width: 100%;
+        height: auto;
+       }
+       nav{
+            width: 100%;
+            background-color: rgb(2, 77, 8);
+            display: flex;
+            justify-content: space-between;
+        }
+        #menuSecciones{
+            display: flex;
+            gap: 30px;
+        }
+        #menuSecciones a{
+            color: white;
+            text-decoration: none;
+            padding: 10px 10px;
+            flex: 1;
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+        }
+        #menuSecciones a:hover{
+            background-color: rgb(30, 20, 1);
+        }
+        #menuRedes{
+            display: flex;
+            gap: 20px;
+            padding: 10px 10px;
+        }
+        #menuRedes a{
+            color: white;
+            text-decoration: none;
+            padding: 10px 10px;
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+        }
+        #menuRedes a:hover{
+            scale: 1.3;
+        }
+        .carrusel{
+            width: 100%;
+            height: 400px;
+            padding: 20px 0px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slides{
+            display: flex;
+            width: auto;
+            height: 100%;
+            animation: move-carrusel 20s infinite;
+        }
+        .slides img{
+            max-height: 100%;
+            width: auto;
+        }
+        @keyframes move-carrusel {
+            0% {
+                transform: translateX(100%); 
+            }
+            100% {
+                transform: translateX(-250%); 
+            }
+        }
+        .titulo{
+            text-align: center;
+            color: black;
+            padding: 20px;
+        }
+
+        h1{
+            font-style: italic;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+            font-size: 50px;
+        }
+        h2{
+            font-size: 40px;
+        }
+        section{
+            width: 93%;
+            text-align: center;
+            align-content: center;
+            padding: 50px;
+        }
+        #seccion1, #seccion3{
+            background-color: rgb(193, 220, 152);
+        }
+        #seccion2, #seccion4{
+            background-color: rgb(116, 148, 68);
+        }
+        .seccion{
+            width: auto;
+            background-color: rgb(255, 255, 255,0.3);
+            border-radius: 20px;
+            border-style: groove;
+            border: 10px;
+            padding: 25px 25px;
+        }
+        .contenidoSeccion{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            padding: 30px;
+        }
+        .pagina_boton{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .enlace{
+            height: auto;
+            width: 130px;
+            text-decoration: none;
+            background-color: green;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .enlace:hover{
+            background-color: #222;
+            scale: 1.1;
+        }
+        .parrafo{
+            border: 5px;
+            border-radius: 20px;
+            border-style: double;
+            max-width: 500px;
+            height: auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            background-color: rgb(3, 70, 9, 0.3);
+        }
+        .parrafo:hover{
+            scale: 1.1;
+            border-color: green;
+            box-shadow: 0 0 10px 5px rgba(140, 246, 170, 0.7);
+        }
+        .video{
+            height: 300px;
+            width: 500px;
+            border-radius: 20px;
+            border: 5px;
+        }
+        .pagina{
+            height: 400px;
+            width: 500px;
+            border-radius: 20px;
+        }
+        .calculadora{
+            height: 600px;
+            width: 500px;
+            border-radius: 20px;
+        }
+        .formulario{
+            height: 400px;
+            width: 800px;
+            border-radius: 20px;
+        }
+        .boton{
+            text-align: right;
+        }
+        .botonInicio{
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 15px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+        .botonInicio:hover{
+            scale: 1.2;
+        }
+        footer {
+            width: 99%;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .redesSociales {
+            display: flex;
+            justify-content: center;
+            gap: 20px; 
+        }
+        .redesSociales img {
+            width: auto;
+            height: 30px;
+            
+        }
+        .redesSociales img:hover{
+            scale: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <header id="menu">
+        <nav>
+            <div id="menuSecciones">
+                <a href="#seccion1">Útimo partido</a>
+                <a href="#seccion2">Entradas para el siguiente partido</a>
+                <a href="#seccion3">Calculadora de la verde</a>
+                <a href="#seccion4">Predicciones</a>
+            </div>
+            <div id="menuRedes">
+                <a href="https.//WhatsApp.com" target="_blank" style="background-color: green;">WhatsApp</a>
+                <a href="https://www.facebook.com/LaVerdeOficial/?locale=es_LA" target="_blank" style="background-color: blue;">Facebook</a>
+                <a href="https://www.tiktok.com/@la.verde.fbf" target="_blank" style="background-color: black;">TikTok</a>
+            </div>  
+        </nav>
+        <div class="carrusel">
+            <div class="slides">
+                <img src="https://eldeber.com.bo/_next/image?url=https%3A%2F%2Fstatic.eldeber.com.bo%2FFiles%2FSizes%2F2024%2F9%2F13%2Fbo_1025344219_760x520.jpg&w=3840&q=75" alt="Imagen del equipo"/>
+                <img src="https://pbs.twimg.com/profile_images/1448326693945544706/IX6iv0Wi_400x400.jpg" alt="Imagen del escudo"/>
+                <img src="https://s.hs-data.com/picmon/9c/suo_bekwC_l.jpg" alt="Imagen de la hinchada"/>
+                <img src="https://img.asmedia.epimg.net/resizer/v2/LMVTCBJJTNCYNCIEX6JS2ZBUJE.png?auth=bede69c6c9aa5250385d1a579eb41a019f89740f0051c9012e646d53f412fb40&width=644&height=362&focal=496%2C247" alt="Imagen del mundial"/>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0cMXeShhxxtKOnTSQT2AlX-B8mCv9R4gpPw&s" alt="Imagen del ultimo partido"/>
+                <img src="https://www.brujuladigital.net/images/news/es/37257_bolivia-consigue-un-monumental-triunfo-en-chile-1.jpg" alt="Imagen de festejo"/>
+            </div>
+        </div>
+        <div class="titulo">
+            <h1>BIENVENIDOS A LA PÁGINA DE LA SELECCIÓN BOLIVIANA</h1>
+        </div>
+    </header>
+
+    <section id="seccion1">
+        <div class="seccion">
+            <div class="subtitulo">
+                <h2>Útimo partido de la verde</h2>
+            </div>
+            <div class="contenidoSeccion">
+                <div class="parrafo">
+                    <p>El último partido de nuestra querida selección lo ganamos de visitante por un marcador de 1-2.</p> 
+                    <p>Este hecho fue histórico ya que Bolivia no ganaba ningún partido de visitante por eliminatorias hace más de 30 años</p>
+                    <p>Los goles para el combinado nacional lo convirtieron Carmelo Algarañaz y Miguel Terceros, mientras que el gol de Chile lo marcó Eduardo Vargas tras una jugada accidentada que terminó en la lesión de Carlos Lampe.</p>      
+                </div>
+                <div>
+                    <iframe class="video" src="https://www.youtube.com/embed/TBbOKs1LZVA?autoplay=1"></iframe>
+                </div>
+            </div>
+            <div class="boton">
+                <button class="botonInicio" onclick="window.location.href='#menu';">Volver al inicio</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion2">
+        <div class="seccion">
+            <div class="subtitulo">
+                <h2>Apoya a la verde</h2>
+            </div>
+            <div class="contenidoSeccion">
+                <div>
+                    <iframe class="pagina" src="https://shop.fbftickets.com.bo/evento/boliviavscolombia#tickets"></iframe>
+                </div>
+                <div class="parrafo">
+                    <p >Desde la FBF habían explicado que la venta de boletos comenzaría el 27 de septiembre a través de la plataforma web: http://www.fbftickets.com.bo. Por otro lado, la venta física de boletos iniciará el jueves 3 de octubre.</p>
+                    <p>Sobre el precio de las entradas se conoció que el Estadio de Villa Ingenio, estará dividido en cuatro zonas. La Zona 1 Tribuna Coka Quina y Agua Sport, tendrá un precio de 150 bolivianos; la Zona 2 Tribuna Coka Quina y Agua Sport, tendrá un precio de 100 bolivianos.</p>
+                    <p>Por otro lado, la Zona 3 Curva VillaSanta y Viscachani, tendrá un costo de 80 bolivianos; y finalmente, la Zona 4 Curva VillaSanta y Viscachani tendrá un precio de 60 bolivianos.</p>        
+                </div>
+            </div>
+            <div class="boton">
+                <button class="botonInicio" onclick="window.location.href='#menu';">Volver al inicio</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion3">
+        <div class="seccion">
+            <div class="subtitulo">
+                <h2>Calculadora de la verde</h2>
+            </div>
+            <div class="contenidoSeccion">
+                <div class="pagina_boton">
+                    <iframe class="calculadora" src="https://jhoelv.github.io/Proyecto-Final/CalculadoraSeleccion.html"></iframe>
+                    <a class="enlace" href="https://drive.google.com/uc?id=1g7oeGLzNsKohF3ZxVEQaIjQXgI2sUExN&export=download" download="CalculadoraSeleccion.html">Descargar calculadora</a>
+                </div>
+                <div class="parrafo">
+                    <p>Esta es la calculadora de la verde querida!!!</p>
+                    <p>Junto a ella podrás calcular los puntos que nos faltan para lograr la tan ansiada clasificación al munidial 2026.</p>
+                    <p>Llego el momento de hacer las cuentas correspondientes para seguir soñando con ver a nuestra amada selección en un mundial.</p>
+                </div>
+            </div>
+            <div class="boton">
+                <button class="botonInicio" onclick="window.location.href='#menu';">Volver al inicio</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion4">
+        <div class="seccion">
+            <div class="subtitulo">
+                <h2>Pronósticos de la verde</h2>
+            </div>
+            <div class="contenidoSeccion">
+                <div class="pagina_boton">
+                    <iframe class="formulario" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRldBTlqWGU6nHf7SgDqZFyCZhrvlkhIq0uWJeGf8ceAch2iImyoB1ddQN2zmyzaSYqHPCFPHwXxchg/pubhtml?gid=0&single=true" ></iframe>
+                    <a class="enlace" href="https://docs.google.com/spreadsheets/d/1nuXtu99XDkPQ5VNuM-pKWne0cX9ZxxxAdRy7q_eIPRg/edit?gid=0#gid=0" target="_blank">Añadir predicción</a>
+                </div>
+                <div class="parrafo">
+                    <p>En este apartado podrás realizar tus predicciones para los próximos partidos que jugará nuestra amada selección.</p>
+                    <p>Se parte del apoyo a nuestros representantes, y danos el pronóstico que creas conveniente, posteriormente veremos si acertaste o fallaste.</p>
+                    <p>Recuerda siempre tener las energías positivas y apoyar con tu corazón a la verde. Unidos todo es posible</p>
+                </div>
+            </div>
+            <div class="boton">
+                <button class="botonInicio" onclick="window.location.href='#menu';">Volver al inicio</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="redesSociales">
+            <a href="https://www.facebook.com/LaVerdeOficial/?locale=es_LA" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/fbf_oficial/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://x.com/fbf_bo?lang=es" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2023/09/02/17/51/x-8229321_1280.png" alt="Twitter">
+            </a>
+            <a href="https://www.tiktok.com/@la.verde.fbf" target="_blank">
+                <img src="https://static.vecteezy.com/system/resources/previews/031/737/223/non_2x/tiktok-logo-tiktok-app-social-media-icons-free-png.png" alt="TikTok">
+            </a>
+            <a href="https://www.youtube.com/@federacionbolivianadefutbo1536/featured" target="_blank">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/986/480/original/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png" alt="YouTube">
+            </a>
+        </div>
+        <p>© 2024 Página de Jhoel Edwin Vasquez Luna - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
