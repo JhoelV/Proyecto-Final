@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Jhoel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            background-image: url(https://previews.123rf.com/images/chanyutcb/chanyutcb1609/chanyutcb160900108/68419999-fondo-artificial-de-hierba-verde-de-la-cancha-de-f%C3%BAtbol.jpg);
+        }
+        .calculator {
+            border: 10px solid #1c1b1b;
+            padding: 20px;
+            border-radius: 20px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq2I_Vps9PGR9oeBEMbWvxt4RiMHBnfttVtw&s);
+            background-size: cover;
+            background-position: center;
+        }
+        #display {
+            width: 93%;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #040404;
+            border-radius: 10px;
+            color: white;
+            background-image: url(https://www.inn.cl/sites/default/files/field/image/4119.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-weight: bold;
+        }
+        .buttonC {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            cursor: pointer;
+            color: rgb(5, 5, 5);
+            border:none;
+            border-radius: 50px;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+
+        }
+        .buttonC:active {
+            background-color: #ccc;
+        }
+
+        .buttonDiv {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            cursor: pointer;
+            color: black;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+        .buttonDiv:active {
+            background-color: #ccc;
+        }
+        .buttonMult {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            color: black;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+        }
+        .buttonMult:active {
+            background-color: #ccc;
+        }
+        .buttonDelete {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+        }
+        .buttonDelete:active {
+            background-color: #ccc;
+        }
+        .button7 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+        }
+        .button7:active {
+            background-color: #ccc;
+        }
+        .button8 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+        }
+        .button8:active {
+            background-color: #ccc;
+        }
+        .button9 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .button9:active {
+            background-color: #ccc;
+        }
+        .buttonNeg {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonNeg:active {
+            background-color: #ccc;
+        }      
+        .button4 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .button4:active {
+            background-color: #ccc;
+        }
+        .button5 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .button5:active {
+            background-color: #ccc;
+        }
+        .button6 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .button6:active {
+            background-color: #ccc;
+        }
+        .buttonMas {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonMas:active {
+            background-color: #ccc;
+        }
+        .button1 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            
+            border: none;
+            border-radius: 50px;
+        }
+        .button1:active {
+            background-color: #ccc;
+        }
+        .button2 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .button2:active {
+            background-color: #ccc;
+        }
+        .button3 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .button3:active {
+            background-color: #ccc;
+        }
+        .buttonIgual {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonIgual:active {
+            background-color: #ccc;
+        }
+        .button0 {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .button0:active {
+            background-color: #ccc;
+        }
+        .buttonPunto {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonPunto:active {
+            background-color: #ccc;
+        }
+        .buttonRaiz {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonRaiz:active {
+            background-color: #ccc;
+        }
+        .buttonPow {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonPow:active {
+            background-color: #ccc;
+        }
+        .buttonParImpar {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonParImpar:active {
+            background-color: #ccc;
+        }
+        .buttonPrimo {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            border: none;
+            border-radius: 50px;
+        }
+        .buttonPrimo:active {
+            background-color: #ccc;
+        }
+        .row {
+            display: flex;
+        }
+        .button-link {
+            width: 75px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            color:black;
+            text-align: center;
+            font-weight: bold;
+            background-color: rgb(217, 233, 221, 0.8);
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            border: none;
+        }
+        .button-link:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="row">
+        <button class="buttonC" onclick="clearDisplay()">C</button>
+        <button class="buttonDiv" onclick="appendToDisplay('/')">/</button>
+        <button class="buttonMult" onclick="appendToDisplay('*')">*</button>
+        <button class="buttonDelete" onclick="deleteLast()">←</button>
+    </div>
+    <div class="row">
+        <button class="button7" onclick="appendToDisplay('7')">7</button>
+        <button class="button8" onclick="appendToDisplay('8')">8</button>
+        <button class="button9" onclick="appendToDisplay('9')">9</button>
+        <button class="buttonNeg" onclick="appendToDisplay('-')">-</button>
+    </div>
+    <div class="row">
+        <button class="button4" onclick="appendToDisplay('4')">4</button>
+        <button class="button5" onclick="appendToDisplay('5')">5</button>
+        <button class="button6" onclick="appendToDisplay('6')">6</button>
+        <button class="buttonMas" onclick="appendToDisplay('+')">+</button>
+    </div>
+    <div class="row">
+        <button class="button1" onclick="appendToDisplay('1')">1</button>
+        <button class="button2" onclick="appendToDisplay('2')">2</button>
+        <button class="button3" onclick="appendToDisplay('3')">3</button>
+        <button class="buttonIgual" onclick="calculateResult()">=</button>
+    </div>
+    <div class="row">
+        <button class="button0" onclick="appendToDisplay('0')">0</button>
+        <button class="buttonPunto" onclick="appendToDisplay('.')">.</button>
+        <button class="buttonRaiz" onclick="calculateSquareRoot()">√</button>
+        <button class="buttonPow" onclick="calculatePower()">x²</button>
+    </div>
+    <div class="row">
+        <button class="buttonParImpar" style="width: 160px" onclick="check()">Par o Impar</button>
+        <button class="buttonPrimo" onclick="checkPrime()">Primo</button>
+        <a href="https://www.youtube.com/watch?v=INwmN6NgRqo" target="_blank" class="button-link">Video</a>
+    </div>
+</div>
+
+
+<script>
+    function appendToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+
+
+    function deleteLast() {
+        var display = document.getElementById('display').value;
+        document.getElementById('display').value = display.slice(0, -1);
+    }
+
+
+    function calculateResult() {
+        var display = document.getElementById('display').value;
+        try {
+            document.getElementById('display').value = eval(display);
+        } catch (error) {
+            document.getElementById('display').value = 'Error';
+        }
+    }
+    
+    function calculatePower() {
+        var display = document.getElementById('display').value;
+        if (display) {
+            document.getElementById('display').value = Math.pow(eval(display), 2);
+        }
+    }
+     function calculateSquareRoot() {
+        var display = document.getElementById('display').value;
+        if (display) {
+            document.getElementById('display').value = Math.sqrt(eval(display));
+        }
+    }
+    function check() {
+        var display = document.getElementById('display').value;
+        if (display) {
+            var number = eval(display);
+            document.getElementById('display').value = (number % 2 === 0) ? 'El numero es par' : 'El numero es impar';
+        }
+    }
+    function checkPrime() {
+        var display = document.getElementById('display').value;
+        if (display) {
+            var number = eval(display);
+            if (number < 2) {
+                document.getElementById('display').value = 'No es Primo';
+                return;
+            }
+            for (var i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    document.getElementById('display').value = 'No es Primo';
+                    return;
+                }
+            }
+            document.getElementById('display').value = 'Primo';
+        } 
+    }
+  
+</script>
+
+
+</body>
+</html>
